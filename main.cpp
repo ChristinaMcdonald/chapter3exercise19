@@ -7,6 +7,7 @@ Requirements: Create a display for monthly loan payment.
 
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -25,12 +26,13 @@ int main() {
     double const amountPaid = monthlyPayment * numberPayments;
     double const interest = amountPaid - loanAmount;
 
-    cout << "Loan Amount: " << loanAmount << endl;
-    cout << "Monthly Interest Rate: " << rate << endl;
-    cout << "Number of Payments: " << numberPayments << endl;
-    cout << "Monthly Payment: " << monthlyPayment << endl;
-    cout << "Amount Paid Back: " << amountPaid << endl;
-    cout << "Interest Paid: " << interest << endl;
+    cout << setw(25) << left << "Loan Amount: " << right << "$ " <<loanAmount << endl;
+    cout << setw(25) << left << "Monthly Interest Rate: " << right << "$ " << rate << endl;
+    cout << setw(25) << left << "Number of Payments: " << right << "$ " << numberPayments << endl;
+    cout << setprecision(2) << fixed;
+    cout << setw(25) << left << "Monthly Payment: " << right << "$ " << monthlyPayment << endl;
+    cout << setw(25) << left << "Amount Paid Back: " <<right << "$ " << amountPaid << endl;
+    cout << setw(25) << left << "Interest Paid: " << right << "$ " << interest << endl;
 
     return 0;
 
