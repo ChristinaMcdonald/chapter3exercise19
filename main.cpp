@@ -34,6 +34,7 @@ int main() {
     cout << setw(25) << left << "Amount Paid Back: " <<right << "$ " << amountPaid << endl;
     cout << setw(25) << left << "Interest Paid: " << right << "$ " << interest << endl;
 
+
     return 0;
 
 
