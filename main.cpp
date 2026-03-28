@@ -21,8 +21,9 @@ int main() {
 
     double monthlyPayment = ((rate * (pow(1 + rate, numberPayments))) / ((pow(1 + rate, numberPayments)) - 1)) * loanAmount;
 
-    double const interest = loanAmount * rate;
-    double const amountPaid = loanAmount + interest;
+
+    double const amountPaid = monthlyPayment * numberPayments;
+    double const interest = amountPaid - loanAmount;
 
     cout << "Loan Amount: " << loanAmount << endl;
     cout << "Monthly Interest Rate: " << rate << endl;
